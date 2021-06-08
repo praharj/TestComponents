@@ -58,7 +58,7 @@ function SectorButton(){
         disableRipple
         className={classes.margin}
       >
-        Bootstrap
+        Bootstrap button
       </BootstrapButton>
     </div>
   );
