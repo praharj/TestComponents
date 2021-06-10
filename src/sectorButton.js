@@ -1,9 +1,12 @@
 import React from 'react';
-const SectorButton = () => {
+import Button from 'react-bootstrap/Button'
+const SectorButton = (props) => {
     return ( 
-        <div>
-            Free
-        </div>
+      <>
+        <Button variant="primary" size="lg" block>
+          Block level button
+        </Button>
+      </>
     );
 }
  
