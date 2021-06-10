@@ -1,28 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css"
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import { green, purple } from "@material-ui/core/colors";
-import SectorButton from './sectorButton'
+import SectorButton from "./sectorButton.js"
 
 function FullWidthGrid() {
   // const classes = useStyles();
 
   return (
     <div>
-      <Grid container spacing={2} style={{height: '100vh'}}>
-        <Grid item sm={12} md={8}>
-          <Paper className="paper">
-            <SectorButton my='auto'/>
-          </Paper>
-        </Grid>
-        <Grid item sm={12} md={4}>
-          <Paper className="paper" >sm=12 md=4</Paper>
-        </Grid>
-      </Grid>
+      Hi0
+      <div style={{width:"80%"}}>
+        By1
+      </div>
+      <div style={{width:"20%"}}>
+        Get1
+      </div>
+      <SectorButton></SectorButton>
     </div>
   );
 }
