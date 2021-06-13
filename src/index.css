@@ -1,3 +1,33 @@
 /* *{
     background-color: aqua;
 } */
+
+#img-title{
+    display: inline;
+    margin-left:20%;
+    text-align: center;
+}
+.choicebtn{
+    margin-left: 15%;
+    margin-top: 10%;
+}
+#primarybtn{
+    margin-left: 0%;
+}
+@media (max-width:800px) {
+    #img-title{
+        display: block;
+        margin-left:0;
+    }
+    #primarybtn{
+        margin: 4% auto 4% auto;
+    }
+}
+
+@media (max-width:800px){
+    .choicebtn{
+        display: block!important;
+        margin: 4% auto 4% auto ;
+    }
+
+}

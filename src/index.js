@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import SectorButton from "./sectorButton.js";
-import {Container,Row,Col} from "react-bootstrap"
+import {Container,Row,Col,Button,Badge,ButtonGroup} from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./navbar.js"
 
@@ -46,11 +46,59 @@ function FullWidthGrid() {
 }
 
 function QuizApp(){
-  return(
+  return (
     <div>
-      Hi
+      <NavBar></NavBar>
+      <div
+        style={{ backgroundColor: "aqua", height: "100vh" }}
+        className="container"
+      >
+        <div style={{ textAlign: "right" }}>
+          <h1>
+            <Badge style={{ width: "200px" }} variant="secondary">
+              Timer-0:00
+            </Badge>
+          </h1>
+          <h1>
+            <Badge style={{ width: "200px" }} variant="secondary">
+              Score-0
+            </Badge>
+          </h1>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          <img
+            style={{
+              border: "1px solid black",
+              borderRadius: "4px",
+              padding: "5px",
+              width: "320px",
+              marginTop: "30px",
+            }}
+            src="https://i.pinimg.com/600x315/89/c3/ec/89c3ec21ef6ca277d9108db0c3339f77.jpg"
+            alt="gus"
+          ></img>
+          <h1 id="img-title">Gus Dancing</h1>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          <Button
+            className="choicebtn"
+            id="primarybtn"
+            // style={{ marginLeft: "0" }}
+            size="lg"
+            variant="light"
+          >
+            Primary
+          </Button>
+          <Button className="choicebtn" size="lg" variant="light">
+            Secondary
+          </Button>
+          <Button className="choicebtn" size="lg" variant="light">
+            Tertiary
+          </Button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 ReactDOM.render(<QuizApp />, document.getElementById("root"));
