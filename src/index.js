@@ -368,25 +368,32 @@ function IdleClicker() {
 
 function Chanbot(){
   const [showBot,setShowBot] = useState(false)
+  const [opacity,setOpacity] = useState(1)
+
+  const Opac = {
+    opacity: {opacity},
+    textAlign: 'center'
+  }
 
   function callChanbot(){
-    document.getElementById('chanbot').style.opacity = '0.6'
+    setOpacity(0.6)
     setShowBot(true)
   }
 
   function closeChanbot(){
-    document.getElementById('chanbot').style.opacity = '1'
+    setOpacity(1)
     setShowBot(false)
   }
 
   return(
     <div>
-    <div id='chanbot' style={{textAlign: 'center'}}>
+    {/* <div id='chanbot' style={Opac}> */}
+      {/* <h1>Chanbot says hi</h1>
       <h1>Chanbot says hi</h1>
       <h1>Chanbot says hi</h1>
-      <h1>Chanbot says hi</h1>
-      <Button onClick={callChanbot}>Chanbot</Button>
-    </div>
+      <Button onClick={callChanbot}>Chanbot</Button> */}
+      <Button id='float-btn' onClick={callChanbot}>Hint</Button>
+    {/* </div> */}
     {showBot ? (
       <div style={{position: 'fixed', top: '20', display: 'flex', left: '30%'}}>
       <div className='chan-box'>
@@ -404,4 +411,4 @@ function Chanbot(){
   )
 }
 
-ReactDOM.render(<Chanbot />, document.getElementById("root"));
+ReactDOM.render(<Home />, document.getElementById("root"));
