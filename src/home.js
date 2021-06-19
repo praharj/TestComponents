@@ -2,10 +2,12 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import SectorButton from "./sectorButton.js";
 import Stats from "./stats";
+import Chanbot from './chanbot'
 
 function Home() {
   return (
     <>
+    <div id='home'>
       <Row noGutters>
         <Col sm={12} md={8} className="text-center mt-2">
           sm=12 md=8
@@ -18,6 +20,8 @@ function Home() {
           <Stats />
         </Col>
       </Row>
+      </div>
+      <Chanbot />
     </>
   );
 }

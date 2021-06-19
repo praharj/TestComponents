@@ -8,6 +8,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./home";
 import QuizApp from "./quizapp";
 import { Button } from "react-bootstrap";
+import { IconContext} from 'react-icons'
+import {MdClose} from 'react-icons/md'
 
 // function App() {
 //   return (
@@ -327,4 +329,50 @@ function IdleClicker() {
     </div>
   );
 }
-ReactDOM.render(<IdleClicker />, document.getElementById("root"));
+
+function Chanbot(){
+  const [showBot,setShowBot] = useState(false)
+  const [opacity,setOpacity] = useState(1)
+
+  const Opac = {
+    opacity: {opacity},
+    textAlign: 'center'
+  }
+
+  function callChanbot(){
+    setOpacity(0.6)
+    setShowBot(true)
+  }
+
+  function closeChanbot(){
+    setOpacity(1)
+    setShowBot(false)
+  }
+
+  return(
+    <div>
+    {/* <div id='chanbot' style={Opac}> */}
+      {/* <h1>Chanbot says hi</h1>
+      <h1>Chanbot says hi</h1>
+      <h1>Chanbot says hi</h1>
+      <Button onClick={callChanbot}>Chanbot</Button> */}
+      <Button id='float-btn' onClick={callChanbot}>Hint</Button>
+    {/* </div> */}
+    {showBot ? (
+      <div style={{position: 'fixed', top: '20', display: 'flex', left: '30%'}}>
+      <div className='chan-box'>
+      <div className='close-icon'>
+        <MdClose size='2em' style={{cursor: 'pointer'}} onClick={closeChanbot} />
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget eros quis odio dictum porta. Maecenas tincidunt pretium purus ut bibendum. Etiam hendrerit velit ultricies, dapibus est quis, malesuada tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet aliquam risus, ut tempor neque fringilla a. Nam hendrerit urna ac justo tristique tincidunt. Ut at congue urna, in semper est. Ut viverra ac metus quis sagittis. Sed pulvinar faucibus ornare. Integer feugiat augue augue, vitae porttitor ante cursus id. Aliquam eu arcu lacus. In mollis aliquam tellus, non semper ligula ornare ac. Duis pulvinar justo sed odio rhoncus viverra.</p>
+      </div>
+      <img src='https://i.imgur.com/WKFJfD3.png'/>
+      </div>
+    ) : (
+      <></>
+    )}
+    </div>
+  )
+}
+
+ReactDOM.render(<Home />, document.getElementById("root"));
