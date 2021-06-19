@@ -176,6 +176,65 @@ function Trial() {
 }
 
 function IdleClicker() {
+  const [buyAmt, setBuyAmt] = useState(1);
+  const incAmt = () => {
+    if (buyAmt === 1) {
+      setBuyAmt(10);
+    } else if (buyAmt === 10) {
+      setBuyAmt(100);
+    } else {
+      setBuyAmt(1);
+    }
+  };
+  const IdleClickerui = () => {
+    return (
+      <div
+        className="container"
+        style={{
+          border: "2px solid black",
+          borderRadius: "10px",
+          marginBottom: "1%",
+          marginTop: "1%",
+        }}
+      >
+        <Row>
+          <Col sm={12} md={4}>
+            <img
+              style={{
+                border: "1px solid black",
+                borderRadius: "50%",
+                objectFit: "contain",
+                width: "150px",
+                height: "150px",
+                marginBottom: "1%",
+                marginTop: "1%",
+              }}
+              src="https://i.ibb.co/bKHs80C/rice.jpg"
+            ></img>
+            <div style={{ display: "inline",textAlign:"center" }}>
+              <Button style={{ width: "100px", marginLeft: "1%" }}>
+                Buy {buyAmt}
+              </Button>
+            </div>
+          </Col>
+          {/* <Col sm={12} md={6}> */}
+          {/* <div style={{ display: "inline-block" }}> */}
+          {/* <Row style={{ display: "inline-block" }}> */}
+          <Col sm={12} md={4} style={{ display: "inline-block" }}>
+            Hi This Manish Pandey,Right Arm Middle Batsman...Favourite Cricketer
+            is Kevin Pietersen.
+          </Col>
+          <Col sm={12} md={4} style={{ display: "inline-block" }}>
+            Hi This Manish Pandey,Right Arm Middle Batsman...Favourite Cricketer
+            is Kevin Pietersen.
+          </Col>
+          {/* </Row> */}
+          {/* </div> */}
+          {/* </Col> */}
+        </Row>
+      </div>
+    );
+  };
   return (
     <div>
       <div
@@ -204,6 +263,7 @@ function IdleClicker() {
           justifyContent: "center",
           backgroundColor: "lightblue",
           padding: "1.25%",
+          // display:"inline",
         }}
       >
         <ul
@@ -252,114 +312,18 @@ function IdleClicker() {
           </li>
         </ul>
       </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
+      <div className="container buybtn">
+        <Button value={buyAmt} onClick={incAmt}>
+          x{buyAmt}
+        </Button>
       </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
-      <div>
-        <img
-          style={{
-            border: "1px solid black",
-            borderRadius: "50%",
-            objectFit: "contain",
-            width: "150px",
-            height: "150px",
-          }}
-          src="https://i.ibb.co/bKHs80C/rice.jpg"
-        ></img>
-      </div>
+      <IdleClickerui></IdleClickerui>
+      <IdleClickerui></IdleClickerui>
+      <IdleClickerui></IdleClickerui>
+      <IdleClickerui></IdleClickerui>
+      <IdleClickerui></IdleClickerui>
+      <IdleClickerui></IdleClickerui>
+      <IdleClickerui></IdleClickerui>
     </div>
   );
 }

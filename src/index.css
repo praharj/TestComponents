@@ -27,6 +27,10 @@
 #nextbtn{
     text-align: right;
 }
+
+.buybtn{
+  text-align: right;
+}
 @media (max-width: 800px) {
   #img-title {
     display: block;
@@ -43,5 +47,8 @@
   }
   #nextbtn{
       text-align: center;
+  }
+  .buybtn{
+    text-align: center;
   }
 }
