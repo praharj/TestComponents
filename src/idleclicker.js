@@ -63,16 +63,22 @@ function IdleClicker() {
             ></img>
           </Col>
           <Col sm={12} md={2} style={{ textAlign: "center" }}>
-            <div style={{textAlign: "center" }}>
-              <Button style={{margin:"auto 0"}}>Buy {buyAmt}</Button>
+            <div style={{ textAlign: "center" }}>
+              Farming<br></br>
+              <br></br>
+              
+              <Button style={{ margin: "auto 0" }}>Buy {buyAmt}</Button>
             </div>
           </Col>
           {/* <Col sm={12} md={6}> */}
           {/* <div style={{ display: "inline-block" }}> */}
           {/* <Row style={{ display: "inline-block" }}> */}
           <Col sm={12} md={4} style={{ display: "inline-block" }}>
-            Hi This Manish Pandey,Right Arm Middle Batsman...Favourite Cricketer
-            is Kevin Pietersen.
+            Income:1000k food/run <br></br>
+            Coins/Run:40<br></br>
+            Current Quantity:200<br></br>
+            Cost to buy next {buyAmt}:2000<br></br>
+            Time for 1 Run: 10 sec
           </Col>
           <Col sm={12} md={4} style={{ display: "inline-block" }}>
           <div className="myProgress">

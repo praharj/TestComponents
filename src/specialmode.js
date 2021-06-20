@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 
 const Industryslider = () => {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(1);
 
   const setValSlider = (event) => {
     setVal(event.target.value);
@@ -22,8 +22,8 @@ const Industryslider = () => {
             value={val}
             class="slider"
             id="myRange"
-          />
-          <p>Value:{val}</p>
+          />Value:
+          <input onInput={setValSlider} type="number" min="1" max="100" value={val} style={{width:"50px"}}></input>
         </div>
       </Col>
     </Row>
@@ -51,24 +51,44 @@ function SpecialMode() {
           <Col sm={12} md={8}>
             <div className="container">
               Industries
-              <Row>
-                <Col>ind1</Col>
-                <Col>ind1</Col>
-                <Col>ind1</Col>
-                <Col>ind1</Col>
-                <Col>Add(+)</Col>
-                {/* <Col>ind1</Col> */}
+              <Row style={{ marginBottom: "2%" }}>
+                <Col>
+                  <Button size="sm" variant="info">
+                    Ind1
+                  </Button>
+                </Col>
+                <Col>
+                  <Button size="sm" variant="info">
+                    Ind1
+                  </Button>
+                </Col>
+                <Col>
+                  <Button size="sm" variant="info">
+                    Ind1
+                  </Button>
+                </Col>
+                <Col>
+                  <Button size="sm" variant="info">
+                    Ind1
+                  </Button>
+                </Col>
+                {/* <Col>Add(+)</Col> */}
+                <Col>
+                  <Button size="sm" variant="info">
+                    Ind1
+                  </Button>
+                </Col>
               </Row>
             </div>
           </Col>
-          <Col sm={12} md={4} style={{textAlign:"center"}}>
+          <Col sm={12} md={4} style={{ textAlign: "center" }}>
             Graphs
           </Col>
         </Row>
       </div>
       <div className="container">
         <Row noGutters>
-          <Col sm={12} md={8} style={{padding:"0"}}>
+          <Col sm={12} md={8} style={{ padding: "0" }}>
             <div
               style={{
                 textAlign: "center",
@@ -81,6 +101,19 @@ function SpecialMode() {
               <Industryslider></Industryslider>
               <Industryslider></Industryslider>
             </div>
+          </Col>
+        </Row>
+      </div>
+      <div className="container">
+        <Row noGutters>
+          <Col sm={12} md={4}>
+            Res1
+          </Col>
+          <Col sm={12} md={4}>
+            Res1
+          </Col>
+          <Col sm={12} md={4}>
+            Res1
           </Col>
         </Row>
       </div>
