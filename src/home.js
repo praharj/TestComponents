@@ -23,7 +23,7 @@ function Home() {
         </Col>
       </Row>
       </div> */}
-      <IdleClicker/>
+      <SpecialMode/>
     </>
   );
 }
