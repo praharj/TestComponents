@@ -5,6 +5,7 @@ import Stats from "./stats";
 import Chanbot from './chanbot'
 import IdleClicker from "./idleclicker.js";
 import MultQuiz from "./multquiz.js";
+import SpecialMode from "./specialmode.js";
 function Home() {
   return (
     <>
