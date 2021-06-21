@@ -31,11 +31,11 @@ function Chanbot() {
         <h1>Chanbot says hi</h1>
         <Button onClick={callChanbot}>Chanbot</Button> */}
       <Button id="float-btn" onClick={callChanbot}>
-        Hint
+        <img src="https://i.imgur.com/LmRc2Rr.png"></img>
       </Button>
       {/* </div> */}
       {showBot ? (
-        <div className='bochak'>
+        <div className="bochak">
           <div className="chan-box">
             <div className="close-icon">
               <MdClose
@@ -49,10 +49,10 @@ function Chanbot() {
               eget eros quis odio dictum porta. Maecenas tincidunt pretium purus
               ut bibendum. Etiam hendrerit velit ultricies, dapibus est quis,
               malesuada tortor. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. 
+              adipiscing elit.
             </p>
           </div>
-          <div id='chanakya'>
+          <div id="chanakya">
             <img src="https://i.imgur.com/WKFJfD3.png" />
           </div>
         </div>

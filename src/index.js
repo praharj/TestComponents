@@ -8,9 +8,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./home";
 import QuizApp from "./quizapp";
 import { Button } from "react-bootstrap";
-import { IconContext} from 'react-icons'
-import {MdClose} from 'react-icons/md'
-
+import { IconContext } from "react-icons";
+import { MdClose } from "react-icons/md";
 
 function Trial() {
   const [count, setCount] = useState(0);

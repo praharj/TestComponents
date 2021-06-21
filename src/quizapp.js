@@ -1,12 +1,11 @@
-import {React,useState} from "react";
-import {Badge,Button} from "react-bootstrap"
-
+import { React, useState } from "react";
+import { Badge, Button } from "react-bootstrap";
 
 function QuizApp() {
   const [score, setScore] = useState(0);
   const [selectedAns, setSelectedAns] = useState("opt3");
-  let correctAns="opt3"
-  const handleClick =()=>{
+  let correctAns = "opt3";
+  const handleClick = () => {
     if (correctAns === selectedAns) {
       setScore((prevScore) => prevScore + 10);
       console.log("Done");
@@ -14,33 +13,30 @@ function QuizApp() {
       setScore((prevScore) => prevScore - 5);
       console.log("Undone");
     }
-  }
+  };
   var timeleft = 20;
   var timeleftstr = "";
-  function timer(){
-    document.getElementById("startbtn").setAttribute("disabled","")
-  var timerid=setInterval(function(){
-    if (timeleft<=0){
-      clearInterval(timerid)
-    }else{
-      timeleft-=1
-      var minutes=Math.floor(timeleft/60);
-      var seconds=timeleft%60;
-      var secondsstr="" 
-      if(seconds<10){
-        secondsstr="0"+JSON.stringify(seconds)
+  function timer() {
+    document.getElementById("startbtn").setAttribute("disabled", "");
+    var timerid = setInterval(function () {
+      if (timeleft <= 0) {
+        clearInterval(timerid);
+      } else {
+        timeleft -= 1;
+        var minutes = Math.floor(timeleft / 60);
+        var seconds = timeleft % 60;
+        var secondsstr = "";
+        if (seconds < 10) {
+          secondsstr = "0" + JSON.stringify(seconds);
+        } else {
+          secondsstr = JSON.stringify(seconds);
+        }
+        timeleftstr = JSON.stringify(minutes) + ":" + secondsstr;
       }
-      else{
-        secondsstr=JSON.stringify(seconds)
-      }
-      timeleftstr=JSON.stringify(minutes)+":"+secondsstr
-    }
-    console.log(timeleftstr)
-    document.getElementById("timer").innerHTML="Time Left-"+timeleftstr
-  },1000)
+      console.log(timeleftstr);
+      document.getElementById("timer").innerHTML = "Time Left-" + timeleftstr;
+    }, 1000);
   }
-
-
 
   return (
     <div

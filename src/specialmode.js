@@ -22,8 +22,16 @@ const Industryslider = () => {
             value={val}
             class="slider"
             id="myRange"
-          />Value:
-          <input onInput={setValSlider} type="number" min="1" max="100" value={val} style={{width:"50px"}}></input>
+          />
+          Value:
+          <input
+            onInput={setValSlider}
+            type="number"
+            min="1"
+            max="100"
+            value={val}
+            style={{ width: "50px" }}
+          ></input>
         </div>
       </Col>
     </Row>
