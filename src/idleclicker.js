@@ -26,6 +26,7 @@ function IdleClicker() {
       function frame() {
         if (width >= 100) {
           clearInterval(id);
+          elem.style.width = "0%";
           i = 0;
         } else {
           width++;
@@ -67,7 +68,7 @@ function IdleClicker() {
               Farming<br></br>
               <br></br>
               
-              <Button style={{ margin: "auto 0" }}>Buy {buyAmt}</Button>
+              <Button style={{ margin: "auto 0",backgroundColor: 'rgba(0, 0, 0, 0.3)', border: 'none' }}>Buy {buyAmt}</Button>
             </div>
           </Col>
           {/* <Col sm={12} md={6}> */}
@@ -84,7 +85,7 @@ function IdleClicker() {
           <div className="myProgress">
             <div id={props.id} className='probar'></div>
           </div>
-            <Button onClick={()=>animate(props.id)} >Click me </Button>
+            <Button onClick={()=>animate(props.id)} style={{backgroundColor: 'rgba(0, 0, 0, 0.3)',border: 'none',marginTop: '2%'}}>Click me </Button>
           </Col>
           {/* </Row> */}
           {/* </div> */}
@@ -191,7 +192,7 @@ function IdleClicker() {
   }
 
   return (
-    <>
+    <div id='idleclick'>
     {showStats ? (
       <>
       <Stats
@@ -214,30 +215,28 @@ function IdleClicker() {
     )}
     <div>
       <div
-        style={{
-          backgroundColor: "chartreuse",
-          textAlign: "center",
-          padding: "1.5% 0",
-        }}
+      className='sm-nav'
       >
-        <Button style={{ width: "85px" }} onClick={()=>setShowStats(true)}>Stats</Button>
+        <Button style={{ width: "85px",backgroundColor: 'rgba(0, 0, 0, 0.3)', border: 'none' }} onClick={()=>setShowStats(true)}>Stats</Button>
         <div
           style={{
             textAlign: "center",
             display: "inline-block ",
             width: "50%",
+            color: 'white',
+            fontWeight: 'bold'
           }}
         >
           952,100,111
         </div>
         <div style={{ textAlign: "right", display: "inline-block" }}>
-          <Button style={{ width: "85px" }} onClick={()=>setShowManagers(true)}>Managers</Button>
+          <Button style={{ width: "85px",backgroundColor: 'rgba(0, 0, 0, 0.3)', border: 'none' }} onClick={()=>setShowManagers(true)}>Managers</Button>
         </div>
       </div>
       <div
         style={{
           justifyContent: "center",
-          backgroundColor: "lightblue",
+          // backgroundColor: "lightblue",
           padding: "1.25%",
           // display:"inline",
         }}
@@ -254,9 +253,8 @@ function IdleClicker() {
             style={{
               display: "inline",
               padding: "1.25%",
-              backgroundColor: "grey",
-              borderLeft: "2px solid black",
-              borderBottom: "2px solid black",
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              borderRight:'1px solid black',
               color: "white",
             }}
           >
@@ -266,9 +264,8 @@ function IdleClicker() {
             style={{
               display: "inline",
               padding: "1.25%",
-              backgroundColor: "grey",
-              borderLeft: "2px solid black",
-              borderBottom: "2px solid black",
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+              borderRight:'1px solid black',
               color: "white",
             }}
           >
@@ -278,9 +275,7 @@ function IdleClicker() {
             style={{
               display: "inline",
               padding: "1.25%",
-              backgroundColor: "grey",
-              borderLeft: "2px solid black",
-              borderBottom: "2px solid black",
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
               color: "white",
             }}
           >
@@ -289,7 +284,7 @@ function IdleClicker() {
         </ul>
       </div>
       <div className="container buybtn">
-        <Button value={buyAmt} onClick={incAmt}>
+        <Button value={buyAmt} onClick={incAmt} style={{backgroundColor: 'rgba(0, 0, 0, 0.3)', border: 'none'}}>
           x{buyAmt}
         </Button>
       </div>
@@ -301,7 +296,7 @@ function IdleClicker() {
       <IdleClickerui id='probar6'></IdleClickerui>
       <IdleClickerui id='probar7'></IdleClickerui>
     </div>
-    </>
+    </div>
   );
 }
 
