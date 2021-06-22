@@ -167,10 +167,11 @@ function Home() {
           </Row>
         </div>
       </div> */}
-      <AboutUs />
+      <SpecialMode />
       {/* </div> */}
     </>
   );
 }
 
 export default Home;
+

@@ -390,3 +390,4 @@ function IdleClicker() {
 }
 
 export default IdleClicker;
+

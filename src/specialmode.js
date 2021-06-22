@@ -41,6 +41,20 @@ const Industryslider = () => {
 function SpecialMode() {
   return (
     <div>
+      <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div>
       <div
         className="container"
         style={{
@@ -130,3 +144,4 @@ function SpecialMode() {
 }
 
 export default SpecialMode;
+
