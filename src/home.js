@@ -10,6 +10,7 @@ import NavBar from "./navbar.js";
 import { Link } from "react-scroll";
 import ContactForm from "./contactus.js";
 import AboutUs from "./aboutus.js";
+import QuizApp from "./quizapp.js";
 function Home() {
   return (
     <>
@@ -167,7 +168,7 @@ function Home() {
           </Row>
         </div>
       </div> */}
-      <SpecialMode />
+      <QuizApp />
       {/* </div> */}
     </>
   );

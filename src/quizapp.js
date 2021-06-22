@@ -69,9 +69,11 @@ function QuizApp() {
         ></img>
         <h1 id="img-title">Gus Dancing</h1>
       </div>
+      <div style={{ textAlign: "center",margin:"10px" }}>
       <Button id="startbtn" onClick={timer}>
-        Start
+            Start
       </Button>
+      </div>
       {/* <Button id="endbtn" onClick={ () =>{clearInterval(timerid)}}>
         End
       </Button> */}
