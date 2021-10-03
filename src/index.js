@@ -30,7 +30,7 @@ function Trial() {
       <span
         style={{ width: "50px", display: "inline-block", textAlign: "center" }}
       >
-        {count}
+       {count}
       </span>
       <Button onClick={increment}>+</Button>
     </div>
