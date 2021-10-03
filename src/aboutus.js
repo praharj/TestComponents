@@ -17,9 +17,7 @@ const AboutUs = () => {
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    As a natural lead-in to additional content, this is a wider card with supporting text underneath. To demonstrate that equal height action, this card includes even more material than the previous.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer></Card.Footer>
